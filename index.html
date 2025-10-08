@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unified Product Catalog</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Product Catalog</h1>
+  </header>
+
+  <section class="filters">
+    <input type="text" id="search" placeholder="Search products..." />
+
+    <label for="category">Category:</label>
+    <select id="category">
+      <option value="all">All</option>
+      <option value="electronics">Electronics</option>
+      <option value="apparel">Apparel</option>
+      <option value="home">Home Goods</option>
+    </select>
+
+    <label for="price">Max Price:</label>
+    <input type="range" id="price" min="0" max="2000" step="50" value="2000" />
+    <span id="price-value">₹2000</span>
+
+    <label for="sort">Sort by:</label>
+    <select id="sort">
+      <option value="low">Price (low to high)</option>
+      <option value="high">Price (high to low)</option>
+    </select>
+
+    <button id="show-btn">Show Products</button>
+    <button id="reset-btn">Reset</button>
+  </section>
+  <section class="category-buttons">
+    <button data-category="all">Show All</button>
+    <button data-category="electronics">Electronics</button>
+    <button data-category="apparel">Apparel</button>
+    <button data-category="home">Home Goods</button>
+  </section>
+
+  <section id="product-list" class="products"></section>
+
+  <script src="script.js"></script>
+</body>
+</html>
